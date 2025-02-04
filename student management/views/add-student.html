@@ -1,0 +1,18 @@
+<div class="w3-container">
+    <h2>Add New Student</h2>
+    <form name="studentForm" ng-submit="saveStudent()" class="w3-panel">
+        <div class="w3-margin-bottom">
+            <label>Name</label>
+            <input type="text" name="name" ng-model="student.name" required class="w3-input">
+        </div>
+        <div class="w3-margin-bottom">
+            <label>Email</label>
+            <input type="email" name="email" ng-model="student.email" required class="w3-input">
+        </div>
+        <div class="w3-margin-bottom">
+            <label>Course</label>
+            <input type="text" name="course" ng-model="student.course" required class="w3-input">
+        </div>
+        <button type="submit" class="w3-button w3-blue" ng-disabled="studentForm.$invalid">Save Student</button>
+    </form>
+</div>

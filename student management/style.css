@@ -1,0 +1,151 @@
+/* Color Palette */
+:root {
+    --primary-color: #25c84e;     /* Bright blue */
+    --secondary-color: #7ED321;   /* Vibrant green */
+    --background-dark: #2C3E50;   /* Deep navy blue */
+    --background-light: #ECF0F1;  /* Light grey */
+    --text-color: #34495E;        /* Charcoal */
+    --accent-color: #FF6B6B;      /* Soft red */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+/* View Transitions */
+.ng-enter {
+    animation: fadeIn 0.5s;
+}
+
+.ng-leave {
+    animation: fadeIn 0.5s reverse;
+}
+
+/* Student List Animations */
+.student-item {
+    transition: all 0.3s ease;
+    background-color: var(--background-light);
+}
+
+.student-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+/* Form Animations */
+.ng-invalid.ng-touched {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+/* Footer Specific Styles */
+footer {
+    background-color: var(--background-dark) !important;
+    color: var(--background-light);
+    padding: 40px 0;
+    border-top: 4px solid var(--primary-color);
+}
+
+footer h4 {
+    color: var(--primary-color) !important;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer ul.w3-ul {
+    background: transparent;
+    border: none;
+}
+
+footer ul.w3-ul li {
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+}
+
+footer ul.w3-ul a {
+    color: var(--background-light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+footer ul.w3-ul a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+footer ul.w3-ul a:hover::after {
+    width: 100%;
+}
+
+footer ul.w3-ul a:hover {
+    color: var(--secondary-color);
+}
+
+/* Button Styles */
+footer .w3-button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    margin: 5px;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+footer .w3-button:hover {
+    background-color: var(--secondary-color) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/* Contact and Social Icons */
+footer .contact-icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .w3-container {
+        padding: 10px;
+    }
+
+    footer .w3-row-padding > div {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+/* Global Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+/* Additional Subtle Animations */
+.interactive-element {
+    transition: all 0.3s ease;
+}
+
+.interactive-element:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

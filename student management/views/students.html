@@ -1,0 +1,26 @@
+<div class="w3-container">
+    <h2>Students List</h2>
+    <table class="w3-table-all">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="student in students" class="student-item">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.course}}</td>
+                <td>
+                    <a href="#/edit-student/{{student.id}}" class="w3-button w3-small w3-green">Edit</a>
+                    <button ng-click="deleteStudent(student.id)" class="w3-button w3-small w3-red">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
